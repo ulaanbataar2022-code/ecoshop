@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoShop — Eco-friendly Online Store</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#catalog" class="logo" aria-label="EcoShop Home">EcoShop</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#catalog">Catalog</a>
+        <a href="#cart" class="cart-link" aria-label="Cart">
+          Cart <span id="cart-count" class="badge" aria-live="polite">0</span>
+        </a>
+        <a href="#checkout">Checkout</a>
+        <a href="#admin" class="admin-link">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> EcoShop — eco-friendly products for everyday life.</p>
+    </div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" aria-label="Close" data-close>&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
